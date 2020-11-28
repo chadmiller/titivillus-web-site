@@ -2,17 +2,39 @@
 <title>titivillus</title>
 <style>
 body {
-	background-color: hsl(42.2, 100%, 71%);
+	background-color: hsl(42.2, 100%, 82%);
 	color: #444;
 	margin: 3ex 5ex;
 	font-family: 'Raleway', sans-serif;
 	font-weight: 200;
 	font-size: larger;
-	padding: 3ex 10%;
+	padding: 3ex 8%;
 }
 
 p, img {
 	margin: 1.7ex auto;
+}
+
+article {
+	height: calc(100vh - 1em - 3ex - 3em);
+	font-size: 2vw;
+	display: grid;
+	place-items: center;
+}
+
+/*
+@media (max-width: 1400px) { article { font-size: 0.53vw; } }
+@media (max-width: 1280px) { article { font-size: 24px; } }
+@media (max-width: 1230px) { article { font-size: 22px; } }
+@media (max-width: 1130px) { article { font-size: 20px; } }
+@media (max-width: 1130px) { article { font-size: 20px; } }
+*/
+article > div {
+	background-color: white;
+	margin: -1em -2em;
+	padding: 1em  2em;
+	min-width: 68ex;
+	border: 1ex solid hsl(42.2, 100%, 89%);
 }
 
 strong {
@@ -20,15 +42,34 @@ strong {
 	font-weight: bold;
 }
 
-section {
+article, section {
 	padding: 1em;
+}
+
+p.definition {
+	font-weight: bolder;
+	margin-top: 1ex;
+}
+
+p.definition span.definitioninjection::before {
+	content: "^";
+	position: relative;
+	top: 1.5ex;
+}
+p.definition span.definitioninjection {
+	font-family: "Shadows Into Light", cursive;
+	position: relative;
+	top: -1ex;
+	display: inline-block;
+	transform: rotate(-5deg);
+	color: #643;
 }
 
 section p.quotation {
 	text-align: center;
 	padding: 4ex 6ex;
 	font-size: 150%;
-	text-shadow: 0 0 4ex white, 0 0 4ex white, 0 0 4ex white, 0 0 4ex white, 0 0 4ex white, 0 0 4ex white, 0 0 4ex white, 0 0 4ex white, 0 0 4ex white, 0 0 2ex white, 0 0 2ex white, 0 0 2ex white, 0 0 2ex white, 0 0 2ex white, 0 0 2ex white, 0 0 2ex white, 0 0 2ex white, 0 0 1ex white, 0 0 1ex white, 0 0 1ex white, 0 0 1ex white, 0 0 1ex white, 0 0 1ex white, 0 0 1ex white, 0 0 1ex white, 0 0 1ex white, 0 0 2ex white; 
+	text-shadow:  0 0 4ex white, 0 0 4ex white, 0 0 4ex white, 0 0 4ex white, 0 0 2ex white, 0 0 2ex white, 0 0 2ex white, 0 0 2ex white, 0 0 2ex white, 0 0 2ex white, 0 0 2ex white, 0 0 2ex white, 0 0 1ex white, 0 0 1ex white, 0 0 1ex white, 0 0 1ex white, 0 0 1ex white, 0 0 1ex white, 0 0 1ex white, 0 0 1ex white, 0 0 1ex white, 0 0 2ex white; 
 }
 
 section#scribes p.quotation {
@@ -63,9 +104,35 @@ code {
 
 </style>
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Jim+Nightshade&family=Raleway:wght@400&family=VT323&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Jim+Nightshade&family=Raleway:wght@400;600&family=VT323&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
 </head>
 <body id="home">
+
+	<article>
+		<div>
+		<p>Agatha for beeskeepers. Stephen for bricklayers. Claude for sculpters...</p>
+
+		<p>Computer programming deserves a supernatural patron, just like all
+		those other vocations have. Fortunately, the perfect candidate already
+		exists, if we look to our technical bretheren in history.</p>
+
+		<p>There's a demon who had a long run corrupting holy texts by distracting
+		scribes at just the right time to introduce errors. When the printing press was
+		invented and scribing died out, he found new purpose, causing typos in
+		books and pamphlets. And now that the printing press is dying?</p>
+
+		<p class="definition"><strong>Titivillus</strong> is the patron demon of scribes and printers 
+		<span class="definitioninjection">and computer programmers</span></p>
+
+		<p>Like scribes and printers did, we should wryly accept he's there,
+		frustrating our desires when we're lax or weak. When we're coding,
+		beware of that distracting smell of food, or that desire to visit that
+		web site to see something interesting. Remind yourself that Titivillus
+		wants your mistakes.</p>
+		</div>
+
+	</article>
 
 	<h1>Titivillus' Third and Future Life</h1>
 
@@ -75,7 +142,7 @@ code {
 
 	<p>In the west, most vocations had a patron saint or patron angel. One class of people in the middle ages stood out as exceptions: Scribes.</p>
 
-	<p>In Europe from the dark ages to middle ages, literacy was rare and mostly useless. If you could read and write, you probably worked for the church. Scribes sat hunched over desks for hours, illuminated by candlelight, copying documents using blotchy ink and fraying quills. They'd read a few words from one manuscript and try to ink out a perfect copy of those words in a new one, and then go back to read the next few words. It was grueling work. Every reproduction of a document or book was made this way, a long chain of handwritten copies of copies stretched across time.</p>
+	<p>In Europe from the dark ages to middle ages, literacy was rare and mostly useless. If you could read and write, you probably worked for the church. Scribes sat hunched over candle-lit desks for hours, copying documents using blotchy ink and fraying quills. They'd read a few words from one manuscript and try to ink out a perfect copy of those words in a new one, and then go back to read the next few words. It was grueling work. Every reproduction of a document or book was made this way, a long chain of handwritten copies of copies stretched across time.</p>
 
 	<p>It was a big deal to make a mistake. Not just the next reader's soul was at stake. Your document might be the source for future copies, and your error might be transmitted into the future. Your mistake could corrupt whole nations.</p>
 
