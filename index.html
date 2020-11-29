@@ -22,19 +22,17 @@ article {
 	place-items: center;
 }
 
-/*
-@media (max-width: 1400px) { article { font-size: 0.53vw; } }
-@media (max-width: 1280px) { article { font-size: 24px; } }
-@media (max-width: 1230px) { article { font-size: 22px; } }
-@media (max-width: 1130px) { article { font-size: 20px; } }
-@media (max-width: 1130px) { article { font-size: 20px; } }
-*/
 article > div {
 	background-color: white;
 	margin: -1em -2em;
 	padding: 1em  2em;
 	min-width: 68ex;
 	border: 1ex solid hsl(42.2, 100%, 89%);
+}
+
+@media (max-width: 1130px) { 
+	article > div { width: 20em; min-width: auto; line-height: 2.9ex; }
+	p.definition { line-height: 3.2ex; }
 }
 
 strong {
@@ -51,12 +49,13 @@ p.definition {
 	margin-top: 1ex;
 }
 
-p.definition span.definitioninjection::before {
+p.definition em.definitioninjection::before {
 	content: "^";
 	position: relative;
 	top: 1.5ex;
 }
-p.definition span.definitioninjection {
+p.definition em.definitioninjection {
+	font-style: normal;
 	font-family: "Shadows Into Light", cursive;
 	position: relative;
 	top: -1ex;
@@ -75,17 +74,12 @@ section p.quotation {
 section#scribes p.quotation {
 	font-family: 'Jim Nightshade', cursive;
 }
-section#printers .quotation {
+section#printers p.quotation {
 	font-family: 'EB Garamond', serif;
 	font-weight: 500;
 }
 section#programmers p.quotation {
 	font-family: 'VT323', monospace;
-}
-
-hr {
-	margin-top: 4ex;
-	margin-bottom: 4ex;
 }
 
 h1, h2, h3, h4 {
@@ -106,6 +100,15 @@ code {
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Jim+Nightshade&family=Raleway:wght@400;600&family=VT323&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HECEK83W16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HECEK83W16');
+</script>
 </head>
 <body id="home">
 
@@ -123,7 +126,7 @@ code {
 		books and pamphlets. And now that the printing press is dying?</p>
 
 		<p class="definition"><strong>Titivillus</strong> is the patron demon of scribes and printers 
-		<span class="definitioninjection">and computer programmers</span></p>
+		<em class="definitioninjection">and computer programmers</em></p>
 
 		<p>Like scribes and printers did, we should wryly accept he's there,
 		frustrating our desires when we're lax or weak. When we're coding,
@@ -133,6 +136,8 @@ code {
 		</div>
 
 	</article>
+
+	<section>
 
 	<h1>Titivillus' Third and Future Life</h1>
 
@@ -175,6 +180,8 @@ code {
 	<p>I say software engineers should embrace Titivillus, just as our Printer and Scribe techy forebears did. <strong>We should make Titivillus the patron demon of computer programming</strong>.</p>
 
 	<p>Similar to how he's worked for millennia, <a href="https://chad.org/tat">Titivillus sits under your elbow</a>, happy to distract you with a rumble of your tummy, or a flash of a bird in your window, or (now) the blinky endorphins of a reloaded web site or the ding of a Slack message. In that instant, he has you, and your mind drifts and he gets some bug into your code.</p>
+
+	</section>
 
 	</section>
 
